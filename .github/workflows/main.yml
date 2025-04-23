@@ -14,8 +14,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pyyaml
+      - name: Print Working Directory
+        run: ls -R
       - name: Run Feed Generator
-        run: python feed.py
+        run: python ll-github-actions-basics/blob/main/feed.yaml
       - name: Push Repo
         run: |
           git config --local user.email "mate.mrse@gmail.com"
